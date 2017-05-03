@@ -1,5 +1,7 @@
 # [Deprecated] scrollSnap
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/electerious/scrollSnap.svg)](https://greenkeeper.io/)
+
 Scroll, stop, snap.
 
 scrollSnap provides a hassle-free alternative to scroll-hijacking, allowing a section-based navigation without harming the user-experience. It's written in Vanilla JS and has zero dependencies.
