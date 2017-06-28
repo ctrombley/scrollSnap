@@ -27,6 +27,22 @@ export const init = function(opts = {}) {
 
 }
 
+export const destroy = function() {
+	window.removeEventListener('wheel', onScroll)
+	window.removeEventListener('keydown', onScroll)
+	window.removeEventListener('resize', onScroll)
+
+	for (let i = 0; i < computedElements.length; ++i) { computedElements[i].dom.classList.remove('active') }
+
+	on = null
+	animating = false
+	scrollTimer = null
+	resizeTimer = null
+	computedOpts = null
+	computedWindow = null
+	computedElements = null
+}
+
 const _init = function(opts) {
 
 	// Get size of window
