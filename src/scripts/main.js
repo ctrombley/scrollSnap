@@ -32,7 +32,9 @@ export const destroy = function() {
 	window.removeEventListener('keydown', onScroll)
 	window.removeEventListener('resize', onScroll)
 
-	for (let i = 0; i < computedElements.length; ++i) { computedElements[i].dom.classList.remove('active') }
+  if (computedElements) {
+    for (let i = 0; i < computedElements.length; ++i) { computedElements[i].dom.classList.remove('active') }
+  }
 
 	on = null
 	animating = false
